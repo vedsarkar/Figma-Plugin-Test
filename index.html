@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Figma Design Tokens Plugin</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="plugin-container">
+        <header class="plugin-header">
+            <h1>Figma Design Tokens Plugin</h1>
+        </header>
+
+        <div class="plugin-controls">
+            <!-- Category Dropdown -->
+            <div class="dropdown-container">
+                <select class="category-dropdown">
+                    <option>Category Dropdown: All</option>
+                    <option>Colors</option>
+                    <option>Typography</option>
+                    <option>Spacing</option>
+                </select>
+            </div>
+
+            <!-- Search Input -->
+            <div class="search-container">
+                <input type="text" class="search-input" placeholder="Search tokens...">
+            </div>
+        </div>
+
+        <div class="tokens-container">
+            <!-- Colors Section -->
+            <details class="token-section" open>
+                <summary class="section-header">
+                    <span class="section-arrow">▼</span>
+                    <span class="section-title">Colors (24)</span>
+                </summary>
+                <div class="section-content">
+                    <div class="token-item color-token">
+                        <div class="color-info">
+                            <span class="color-swatch" style="background-color: #0066CC;"></span>
+                            <span class="token-name">primary-blue</span>
+                        </div>
+                        <span class="token-value">#0066CC</span>
+                    </div>
+                    <div class="token-item color-token">
+                        <div class="color-info">
+                            <span class="color-swatch" style="background-color: #FF4444;"></span>
+                            <span class="token-name">secondary-red</span>
+                        </div>
+                        <span class="token-value">#FF4444</span>
+                    </div>
+                    <div class="token-item color-token">
+                        <div class="color-info">
+                            <span class="color-swatch" style="background-color: #00CC66;"></span>
+                            <span class="token-name">accent-green</span>
+                        </div>
+                        <span class="token-value">#00CC66</span>
+                    </div>
+                </div>
+            </details>
+
+            <!-- Typography Section -->
+            <details class="token-section" open>
+                <summary class="section-header">
+                    <span class="section-arrow">▼</span>
+                    <span class="section-title">Typography (12)</span>
+                </summary>
+                <div class="section-content">
+                    <div class="token-item">
+                        <span class="token-name">heading-large</span>
+                        <span class="token-value">32px/700</span>
+                    </div>
+                    <div class="token-item">
+                        <span class="token-name">body-regular</span>
+                        <span class="token-value">16px/400</span>
+                    </div>
+                </div>
+            </details>
+
+            <!-- Spacing Section -->
+            <details class="token-section" open>
+                <summary class="section-header">
+                    <span class="section-arrow">▼</span>
+                    <span class="section-title">Spacing (8)</span>
+                </summary>
+                <div class="section-content">
+                    <div class="token-item">
+                        <span class="token-name">space-md</span>
+                        <span class="token-value">16px</span>
+                    </div>
+                    <div class="token-item">
+                        <span class="token-name">space-lg</span>
+                        <span class="token-value">24px</span>
+                    </div>
+                </div>
+            </details>
+        </div>
+
+        <footer class="plugin-footer">
+            <button class="footer-btn">Settings</button>
+            <button class="footer-btn">Export All</button>
+            <button class="footer-btn">Sync</button>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
