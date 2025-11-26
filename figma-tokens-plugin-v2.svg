@@ -1,0 +1,120 @@
+<svg width="480" height="660" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Light shadow for color swatches only -->
+    <filter id="swatchShadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="1.5"/>
+      <feOffset dx="0" dy="1" result="offsetblur"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.1"/>
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Main Container (no shadow, no background) -->
+  <rect x="0" y="0" width="480" height="660" rx="12" fill="#ffffff"/>
+  
+  <!-- Header -->
+  <rect x="0" y="0" width="480" height="73" rx="12" fill="#ffffff"/>
+  <rect x="0" y="73" width="480" height="1" fill="#e5e5e5"/>
+  <text x="24" y="46" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="24" font-weight="600" fill="#1a1a1a">Figma Design Tokens Plugin</text>
+  
+  <!-- Controls Section Background -->
+  <rect x="0" y="73" width="480" height="116" fill="#fafafa"/>
+  
+  <!-- Category Dropdown -->
+  <rect x="24" y="93" width="432" height="44" rx="8" fill="#ffffff" stroke="#d5d5d5" stroke-width="1"/>
+  <text x="40" y="120" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" fill="#333">Category Dropdown: All</text>
+  <!-- Dropdown arrow -->
+  <polyline points="438,111 443,116 448,111" fill="none" stroke="#333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- Search Input -->
+  <rect x="24" y="149" width="432" height="44" rx="8" fill="#ffffff" stroke="#d5d5d5" stroke-width="1"/>
+  <text x="40" y="176" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" fill="#999">Search tokens...</text>
+  
+  <!-- Tokens Container -->
+  <rect x="0" y="189" width="480" height="400" fill="#ffffff"/>
+  
+  <!-- Colors Section -->
+  <g id="colorsSection">
+    <!-- Section Header -->
+    <text x="24" y="217" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#666">▼</text>
+    <text x="40" y="217" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="500" fill="#333">Colors (24)</text>
+    
+    <!-- Color Token 1: primary-blue -->
+    <g filter="url(#swatchShadow)">
+      <rect x="48" y="235" width="32" height="32" rx="6" fill="#0066CC" stroke="rgba(0,0,0,0.05)" stroke-width="1"/>
+    </g>
+    <text x="92" y="256" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" fill="#333">primary-blue</text>
+    <text x="456" y="256" font-family="'SF Mono', Monaco, 'Courier New', monospace" font-size="13" fill="#666" text-anchor="end">#0066CC</text>
+    
+    <!-- Color Token 2: secondary-red -->
+    <g filter="url(#swatchShadow)">
+      <rect x="48" y="277" width="32" height="32" rx="6" fill="#FF4444" stroke="rgba(0,0,0,0.05)" stroke-width="1"/>
+    </g>
+    <text x="92" y="298" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" fill="#333">secondary-red</text>
+    <text x="456" y="298" font-family="'SF Mono', Monaco, 'Courier New', monospace" font-size="13" fill="#666" text-anchor="end">#FF4444</text>
+    
+    <!-- Color Token 3: accent-green -->
+    <g filter="url(#swatchShadow)">
+      <rect x="48" y="319" width="32" height="32" rx="6" fill="#00CC66" stroke="rgba(0,0,0,0.05)" stroke-width="1"/>
+    </g>
+    <text x="92" y="340" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" fill="#333">accent-green</text>
+    <text x="456" y="340" font-family="'SF Mono', Monaco, 'Courier New', monospace" font-size="13" fill="#666" text-anchor="end">#00CC66</text>
+  </g>
+  
+  <!-- Typography Section -->
+  <g id="typographySection">
+    <!-- Section Header -->
+    <text x="24" y="385" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#666">▼</text>
+    <text x="40" y="385" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="500" fill="#333">Typography (12)</text>
+    
+    <!-- Typography Token 1: heading-large -->
+    <text x="48" y="413" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" fill="#333">heading-large</text>
+    <text x="456" y="413" font-family="'SF Mono', Monaco, 'Courier New', monospace" font-size="13" fill="#666" text-anchor="end">32px/700</text>
+    
+    <!-- Typography Token 2: body-regular -->
+    <text x="48" y="443" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" fill="#333">body-regular</text>
+    <text x="456" y="443" font-family="'SF Mono', Monaco, 'Courier New', monospace" font-size="13" fill="#666" text-anchor="end">16px/400</text>
+  </g>
+  
+  <!-- Spacing Section -->
+  <g id="spacingSection">
+    <!-- Section Header -->
+    <text x="24" y="483" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#666">▼</text>
+    <text x="40" y="483" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="500" fill="#333">Spacing (8)</text>
+    
+    <!-- Spacing Token 1: space-md -->
+    <text x="48" y="511" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" fill="#333">space-md</text>
+    <text x="456" y="511" font-family="'SF Mono', Monaco, 'Courier New', monospace" font-size="13" fill="#666" text-anchor="end">16px</text>
+    
+    <!-- Spacing Token 2: space-lg -->
+    <text x="48" y="541" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" fill="#333">space-lg</text>
+    <text x="456" y="541" font-family="'SF Mono', Monaco, 'Courier New', monospace" font-size="13" fill="#666" text-anchor="end">24px</text>
+  </g>
+  
+  <!-- Footer Border -->
+  <rect x="0" y="589" width="480" height="1" fill="#e5e5e5"/>
+  
+  <!-- Footer Background -->
+  <rect x="0" y="589" width="480" height="71" fill="#fafafa"/>
+  
+  <!-- Footer Buttons -->
+  <!-- Settings Button -->
+  <rect x="24" y="605" width="131" height="39" rx="6" fill="#ffffff" stroke="#d5d5d5" stroke-width="1"/>
+  <text x="89.5" y="629" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="500" fill="#333" text-anchor="middle">Settings</text>
+  
+  <!-- Export All Button -->
+  <rect x="167" y="605" width="131" height="39" rx="6" fill="#ffffff" stroke="#d5d5d5" stroke-width="1"/>
+  <text x="232.5" y="629" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="500" fill="#333" text-anchor="middle">Export All</text>
+  
+  <!-- Sync Button -->
+  <rect x="310" y="605" width="131" height="39" rx="6" fill="#ffffff" stroke="#d5d5d5" stroke-width="1"/>
+  <text x="375.5" y="629" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="500" fill="#333" text-anchor="middle">Sync</text>
+  
+  <!-- Bottom rounded corners -->
+  <path d="M 0 648 L 0 648 Q 0 660 12 660 L 468 660 Q 480 660 480 648 L 480 648 L 0 648" fill="#fafafa"/>
+</svg>
