@@ -33,7 +33,8 @@ A clean, modern UI for managing design tokens in Figma, with GitHub integration 
 ├── index.html          # Main HTML file with plugin UI
 ├── styles.css          # CSS styles for the UI
 ├── script.js           # JavaScript for interactivity
-├── figma-tokens-plugin.svg  # Static SVG version of the UI
+├── figma-tokens-plugin.svg     # Static SVG version with shadow (500x700)
+├── figma-tokens-plugin-v2.svg  # Clean SVG version without shadow (480x660)
 ├── config.example.env  # Environment variables template
 ├── test-token.sh       # GitHub token testing script
 └── GITHUB_TOKEN_SETUP.md  # Token setup guide
