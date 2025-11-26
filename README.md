@@ -30,15 +30,34 @@ A clean, modern UI for managing design tokens in Figma, with GitHub integration 
 ## File Structure
 
 ```
-├── index.html          # Main HTML file with plugin UI
-├── styles.css          # CSS styles for the UI
-├── script.js           # JavaScript for interactivity
-├── figma-tokens-plugin.svg     # Static SVG version with shadow (500x700)
-├── figma-tokens-plugin-v2.svg  # Clean SVG version without shadow (480x660)
-├── config.example.env  # Environment variables template
-├── test-token.sh       # GitHub token testing script
-└── GITHUB_TOKEN_SETUP.md  # Token setup guide
+├── index.html                          # Main HTML file with plugin UI
+├── styles.css                          # CSS styles for the UI
+├── script.js                           # JavaScript for interactivity
+├── figma-tokens-plugin.svg             # Static SVG with shadow (500x700)
+├── figma-tokens-plugin-v2.svg          # Clean SVG without shadow (480x660)
+├── figma-tokens-plugin-v2_AutoLayout.svg  # Auto-layout SVG with CSS flexbox (480x660)
+├── config.example.env                  # Environment variables template
+├── test-token.sh                       # GitHub token testing script
+└── GITHUB_TOKEN_SETUP.md               # Token setup guide
 ```
+
+## SVG Versions
+
+Three SVG versions are available for different use cases:
+
+1. **`figma-tokens-plugin.svg`** (500x700px)
+   - Static SVG with background shadow
+   - Best for: Mockups, presentations, documentation with spacing
+
+2. **`figma-tokens-plugin-v2.svg`** (480x660px)
+   - Clean SVG without shadow or background
+   - Best for: Embedding in designs, importing to Figma, tight layouts
+
+3. **`figma-tokens-plugin-v2_AutoLayout.svg`** (480x660px) ⭐
+   - Uses `foreignObject` with CSS flexbox for true auto-layout
+   - Content reflows naturally based on CSS rules
+   - Best for: Web use, responsive designs, dynamic content
+   - Note: Requires modern browsers/viewers that support `foreignObject`
 
 ## UI Components
 
